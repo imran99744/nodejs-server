@@ -1,0 +1,16 @@
+name: Restart Server
+
+on:
+  repository_dispatch:
+    types: [restart-server]
+
+jobs:
+  restart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Restart Server
+        run: |
+          echo "Restarting server..."
