@@ -1,8 +1,7 @@
 name: Restart Server
 
 on:
-  repository_dispatch:
-    types: [restart-server]
+  workflow_dispatch:
 
 jobs:
   restart:
